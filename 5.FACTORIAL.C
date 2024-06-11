@@ -1,0 +1,14 @@
+#include<stdio.h>
+#include<conio.h>
+int main(){
+	int i,n,fact=1;
+	printf("R.JASWANTH, Reg.No - 192211602");
+	printf("\nEnter the Number:");
+	scanf("%d",&n);
+	for(i=1;i<=n;i++){
+		fact = fact*i;
+		}
+	printf("Factorial of %d is %d",n,fact);
+    getch();
+	return 0;
+}
