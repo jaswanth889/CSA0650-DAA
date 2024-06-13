@@ -1,0 +1,17 @@
+#include <stdio.h>
+#include <string.h>
+int main()
+{
+	int i,j,len;
+	char c,str[100] = "string";
+	printf("R.JASWANTH, Reg.No: 192211602");
+	printf("\nOriginal String: %s\n", str);
+	len=strlen(str);
+	for(i = 0, j = len - 1; i <= j; i++, j--){
+		c = str[i];
+		str[i] = str[j];
+		str[j] = c;
+	}
+	printf("\nReversed String: %s", str);
+	return 0;
+}
