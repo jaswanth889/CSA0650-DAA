@@ -1,0 +1,95 @@
+Skip to content
+Navigation Menu
+Product
+Solutions
+Open Source
+Enterprise
+Pricing
+
+Search or jump to...
+Sign in
+Sign up
+Jayaram192210314
+/
+CSA0650-DESIGN-AND-ANALYSIS-OF-ALGORITHMS-
+Public
+Code
+Issues
+Pull requests
+Actions
+Projects
+Security
+Insights
+Files
+Go to file
+1-Fibonacci Series
+10-Palindrome
+11-Copy one string to another
+12-BinarySearch
+13-Reverse
+14-Length of a string
+15.Strassen’s Matrix Multiplication
+16-MergeSort
+2-ArmstrongNumber
+3-GCD
+4-Largest element in Array
+5-Factorial
+6-Prime number
+7.Selection sort
+8-Bubble sort
+9-Multiply two Matrix
+BreadcrumbsCSA0650-DESIGN-AND-ANALYSIS-OF-ALGORITHMS-
+/12-BinarySearch
+Blame
+
+Latest commit
+Jayaram192210314
+Jayaram192210314
+Create 12-BinarySearch
+376d2e9
+ · 
+yesterday
+History
+File metadata and controls
+
+Code
+
+Blame
+33 lines (33 loc) · 732 Bytes
+Raw
+
+
+#include<stdio.h>
+int BS(int a[], int x, int low, int high) {
+  if (high >= low) {
+    int mid = low + (high - low) / 2;
+    if (a[mid] == x)
+      return mid;
+    if (a[mid] > x)
+      return BS(a, x, low, mid - 1);
+    return BS(a, x, mid + 1, high);
+  }
+  return -1;
+}
+int main(){
+	int n,a[100],x,res,i;
+	printf("R.JASWANTH, Reg.No: 192211602");
+	printf("\nEnter the Number:");
+	scanf("%d",&n);
+	for(i=0;i<n;i++){
+	scanf("%d",&a[i]);
+	}
+	printf("\nElements in the Array were:");
+	for(i=0;i<n;i++){
+	printf("%d ",a[i]);
+	}
+	printf("\nEnter the Search Number:");
+	scanf("%d",&x);
+	res = BS(a, x, 0, n - 1);
+	if (res == -1)
+    	printf("Not found");
+  	else
+    	printf("Element is found at index %d",res);
+    return 0;      
+}
+CSA0650-DESIGN-AND-ANALYSIS-OF-ALGORITHMS-/12-BinarySearch at main · Jayaram192210314/CSA0650-DESIGN-AND-ANALYSIS-OF-ALGORITHMS- · GitHub 
