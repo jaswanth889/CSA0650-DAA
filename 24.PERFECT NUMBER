@@ -1,0 +1,20 @@
+#include<stdio.h>
+int main(){
+	int n,a,i;
+	a=0;
+	printf("M.Mahesh-192210312\n");
+	printf("enter the number:\n");
+	scanf("%d",&n);
+	for(i=1;i<n;i++){
+		if(n%i==0){
+		a+=i;
+	}
+	}
+	if(a==n){
+		printf("%d is a perfect number",n);	
+	}
+	else{
+	    printf("%d is not a perfect number",n);
+	}
+	
+}
