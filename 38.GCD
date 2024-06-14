@@ -1,0 +1,19 @@
+#include<stdio.h>
+int main()
+{
+	printf("Dishitha-192211436\n");
+	int num1,num2,GCD,deno,nume,rem;
+	printf("enter the number");
+	scanf("%d %d",&num1,&num2);
+	nume=(num1>num2)?num1:num2;
+	deno=(num1<num2)?num1:num2;
+	rem=nume%deno;
+	while(rem!=0)
+	{
+		nume=deno;
+		deno=rem;
+		rem=nume%deno;
+	}
+	GCD=deno;
+	printf("GCD=%d",GCD);
+}
