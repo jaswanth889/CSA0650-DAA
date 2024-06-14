@@ -1,0 +1,21 @@
+#include <stdio.h>
+long long factorial(int n) {
+    if (n == 0 || n == 1)
+        return 1;
+    return n * factorial(n - 1);
+}
+long long binomialCoefficient(int n, int k) {
+    if (k > n) 
+        return 0;
+    if (k == 0 || k == n) 
+        return 1;
+    return factorial(n) / (factorial(k) * factorial(n - k));
+}
+
+int main() {
+	printf("M.Mahesh-192210312\n");
+    int n = 5;
+    int k = 2;
+    printf("C(%d, %d) = %lld\n", n, k, binomialCoefficient(n, k));
+    return 0;
+}
